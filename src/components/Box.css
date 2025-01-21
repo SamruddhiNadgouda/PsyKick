@@ -1,0 +1,15 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.1rem;
+    border: none;
+    margin: 2rem;
+    border-radius: 20px;
+    width: 30rem;
+    background-color: #f9e7bb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.box img{
+    margin: 1rem;
+}

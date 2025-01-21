@@ -1,0 +1,35 @@
+header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #004d40;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+.logo img {
+    height: 6rem;
+    border-radius: 50%;
+    border: none;
+}
+.logo h1{
+    font-family: "Lobster", serif;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+}
+.profile{
+    margin-right: 4rem;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    margin-right: 4rem;
+    text-decoration: none;
+    font-size: x-large;
+    color: #004d40;
+}
