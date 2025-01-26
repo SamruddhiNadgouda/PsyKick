@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -45,9 +46,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-container" style={{ maxWidth: "400px", margin: "auto", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}>
-      <h2>Contact Us</h2>
-      {isSubmitted && <p style={{ color: "green" }}>Your message has been sent successfully!</p>}
+    <div className="contact-form-container">
+      <h2 style={{fontSize: "2rem"}}>Contact Us</h2>
+      {isSubmitted && <p>Your message has been sent successfully!</p>}
       <form onSubmit={handleSubmit} noValidate>
         <div style={{ marginBottom: "15px" }}>
           <label htmlFor="name">Name:</label>
@@ -57,12 +58,11 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            style={{ width: "100%", padding: "8px", margin: "5px 0" }}
           />
-          {errors.name && <small style={{ color: "red" }}>{errors.name}</small>}
+          {errors.name && <small>{errors.name}</small>}
         </div>
 
-        <div style={{ marginBottom: "15px" }}>
+        <div>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -70,34 +70,24 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            style={{ width: "100%", padding: "8px", margin: "5px 0" }}
           />
-          {errors.email && <small style={{ color: "red" }}>{errors.email}</small>}
+          {errors.email && <small>{errors.email}</small>}
         </div>
 
-        <div style={{ marginBottom: "15px" }}>
+        <div>
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
             name="message"
-            rows="4"
             value={formData.message}
             onChange={handleChange}
-            style={{ width: "100%", padding: "8px", margin: "5px 0" }}
           ></textarea>
-          {errors.message && <small style={{ color: "red" }}>{errors.message}</small>}
+          {errors.message && <small>{errors.message}</small>}
         </div>
 
         <button
           type="submit"
-          style={{
-            backgroundColor: "#4CAF50",
-            color: "white",
-            padding: "10px 20px",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
+          id="submit-button"
         >
           Submit
         </button>
